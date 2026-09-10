@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<title>FocusGuard 2.0</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">FG</div><div><b>FocusGuard</b><small>2.0 • Study Guardian</small></div></div>
+    <nav>
+      <button class="nav active" data-view="dashboard">⌂ داشبورد</button>
+      <button class="nav" data-view="schedule">▦ برنامه هفتگی</button>
+      <button class="nav" data-view="apps">◉ اپ‌های مزاحم</button>
+      <button class="nav" data-view="analytics">◒ آمار و تحلیل</button>
+      <button class="nav" data-view="missions">✦ مأموریت‌ها</button>
+      <button class="nav" data-view="settings">⚙ تنظیمات</button>
+    </nav>
+    <div class="side-note"><span class="dot"></span> حالت هوشمند فعال</div>
+    <footer>سازنده: <b>beemax</b></footer>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div><span class="eyebrow">مرکز کنترل مطالعه</span><h1 id="pageTitle">داشبورد</h1></div>
+      <div class="status"><span class="pulse"></span> امروز <strong id="todayText"></strong></div>
+    </header>
+
+    <section id="dashboard" class="view active">
+      <div class="hero">
+        <div>
+          <span class="tag">FOCUS SCORE</span>
+          <h2 id="score">78</h2>
+          <p id="scoreText">عملکردت خوبه؛ فقط حواس‌پرتی‌های کوتاه را کمتر کن.</p>
+          <div class="meter"><i id="scoreMeter"></i></div>
+        </div>
+        <div class="ring"><span id="focusMinutes">125</span><small>دقیقه تمرکز</small></div>
+      </div>
+
+      <div class="grid four">
+        <article class="card stat"><span>پارت‌های امروز</span><b id="sessionsDone">3 / 5</b><small>۲ پارت باقی مانده</small></article>
+        <article class="card stat"><span>هدف هفتگی</span><b id="weeklyHours">11.5h</b><small>از 18 ساعت</small></article>
+        <article class="card stat"><span>رکورد تمرکز</span><b>54 دقیقه</b><small>این هفته</small></article>
+        <article class="card stat"><span>حالت فعلی</span><b id="modeLabel">Study</b><small>محافظ مطالعه</small></article>
+      </div>
+
+      <div class="grid main-grid">
+        <article class="card timer-card">
+          <div class="card-head"><div><span class="tag">FOCUS TIMER</span><h3>پارت بعدی</h3></div><button class="ghost" id="modeBtn">تغییر حالت</button></div>
+          <div class="timer" id="timer">25:00</div>
+          <div class="timer-sub" id="timerSub">آماده شروع • مطالعه</div>
+          <div class="timer-actions"><button class="primary" id="startBtn">شروع پارت</button><button class="ghost" id="resetBtn">ریست</button></div>
+          <div class="chips"><span>امروز: ۵ پارت</span><span>هدف هر پارت: ۲۵ دقیقه</span></div>
+        </article>
+
+        <article class="card">
+          <div class="card-head"><div><span class="tag">NEXT UP</span><h3>برنامه امروز</h3></div><button class="link-btn" data-view-jump="schedule">مشاهده همه</button></div>
+          <div id="todaySchedule" class="list"></div>
+        </article>
+      </div>
+
+      <div class="grid main-grid">
+        <article class="card reality">
+          <div class="card-head"><div><span class="tag warn">TIME REALITY</span><h3>تلنگر زمانی</h3></div><span class="badge danger">این هفته</span></div>
+          <div class="reality-number" id="realityHours">8h 42m</div>
+          <p>بیشترین زمان غیر درسی این هفته روی <strong id="topAppName">Instagram</strong> ثبت شده.</p>
+          <div class="reality-grid"><div><b id="topAppTime">6h 18m</b><small>استفاده از اپ برتر</small></div><div><b id="yearLoss">27.3 روز</b><small>معادل سالانه با همین الگو</small></div></div>
+          <small class="muted">این عدد برای آگاهی از ارزش زمان است، نه سرزنش. هدف: انتخاب آگاهانه‌تر.</small>
+        </article>
+
+        <article class="card">
+          <div class="card-head"><div><span class="tag">SMART GUARD</span><h3>وضعیت مراقبت</h3></div><span class="badge ok">آماده</span></div>
+          <div class="guard"><div class="guard-icon">✓</div><div><b>پارت ۱۴:۰۰ تا ۱۴:۴۵</b><p>۳ اپ انتخابی برای محدودسازی آماده‌اند.</p></div></div>
+          <div class="progress-row"><span>پایبندی امروز</span><b>82%</b></div><div class="meter"><i style="width:82%"></i></div>
+          <button class="primary wide" id="quickStudy">فعال‌سازی Study Mode</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="schedule" class="view">
+      <div class="section-head"><div><span class="tag">WEEKLY PLAN</span><h2>برنامه هفتگی</h2><p>پارت‌هایت را مشخص کن؛ FocusGuard از آن‌ها به‌عنوان برنامه اصلی استفاده می‌کند.</p></div><button class="primary" id="addBlock">+ پارت جدید</button></div>
+      <div class="week" id="week"></div>
+    </section>
+
+    <section id="apps" class="view">
+      <div class="section-head"><div><span class="tag">DISTRACTION CONTROL</span><h2>اپ‌های مزاحم</h2><p>در نسخه وب این بخش تنظیمات را نگه می‌دارد؛ مسدودسازی واقعی اپ‌ها به Companion اندروید نیاز دارد.</p></div><span class="badge warn">Web Preview</span></div>
+      <div class="app-grid" id="appGrid"></div>
+      <div class="card info"><b>اتصال اندروید</b><p>برای آمار واقعی مصرف و اعمال محدودیت روی اپ‌ها، نسخه Android Companion باید مجوزهای لازم سیستم‌عامل را با تأیید کاربر دریافت کند.</p></div>
+    </section>
+
+    <section id="analytics" class="view">
+      <div class="section-head"><div><span class="tag">WEEKLY INTELLIGENCE</span><h2>آمار و تحلیل</h2><p>نمونه داده برای نمایش رابط؛ در Companion اندروید با داده واقعی جایگزین می‌شود.</p></div></div>
+      <div class="grid three">
+        <article class="card big-stat"><span>تمرکز</span><b>11h 30m</b><small>+14% نسبت به هفته قبل</small></article>
+        <article class="card big-stat"><span>حواس‌پرتی</span><b>8h 42m</b><small>−9% نسبت به هفته قبل</small></article>
+        <article class="card big-stat"><span>بهترین روز</span><b>شنبه</b><small>3h 12m تمرکز</small></article>
+      </div>
+      <article class="card chart-card"><div class="card-head"><h3>تمرکز روزانه</h3><span class="muted">ساعت</span></div><div class="bars" id="bars"></div></article>
+      <article class="card"><div class="card-head"><h3>پیشنهاد هوشمند</h3><span class="badge ok">AI-like rules</span></div><div class="recommend">اگر دو روز متوالی پارت اولت را کامل می‌کنی، پارت اول را ۱۰ دقیقه طولانی‌تر کن و اپ‌های مزاحم را در همان بازه محدود نگه دار.</div></article>
+    </section>
+
+    <section id="missions" class="view">
+      <div class="section-head"><div><span class="tag">MISSIONS</span><h2>مأموریت‌های این هفته</h2><p>هدف‌های کوچک، قابل انجام و قابل اندازه‌گیری.</p></div></div>
+      <div class="mission-grid">
+        <article class="card mission"><b>۵ پارت کامل</b><span>۳ / ۵</span><div class="meter"><i style="width:60%"></i></div></article>
+        <article class="card mission"><b>کاهش ۳۰ دقیقه حواس‌پرتی</b><span>۴۲ دقیقه ✓</span><div class="meter"><i style="width:100%"></i></div></article>
+        <article class="card mission"><b>۳ روز پشت‌سرهم</b><span>۲ / ۳</span><div class="meter"><i style="width:66%"></i></div></article>
+      </div>
+    </section>
+
+    <section id="settings" class="view">
+      <div class="section-head"><div><span class="tag">SETTINGS</span><h2>تنظیمات</h2></div></div>
+      <div class="card settings">
+        <label>نام کاربر<input id="userName" value="دانش‌آموز"></label>
+        <label>هدف هفتگی (ساعت)<input id="weeklyGoal" type="number" value="18" min="1" max="80"></label>
+        <label class="switchline">حالت هوشمند <input id="smartToggle" type="checkbox" checked><span class="switch"></span></label>
+        <button class="primary" id="saveSettings">ذخیره تنظیمات</button>
+      </div>
+    </section>
+  </main>
+</div>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
