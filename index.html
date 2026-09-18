@@ -1,205 +1,40 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0d241b">
-<title>ختم قرآن کریم</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1c14"><title>ختم قرآن کریم</title>
 <style>
-:root{--bg:#07130f;--card:#10231b;--card2:#142b21;--gold:#d9b86c;--gold2:#f0d898;--text:#f8f4e8;--muted:#aebdb4;--green:#55c98a;--red:#e88a7d;--line:#284437;--shadow:0 14px 40px #0008}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#234b38 0,#0b1913 38%,var(--bg) 75%);color:var(--text);font-family:Tahoma,Arial,sans-serif;min-height:100vh}
-button,input{font:inherit}button{cursor:pointer;border:0}.wrap{max-width:1050px;margin:auto;padding:18px 14px 50px}
-.hero{padding:26px 18px 20px;text-align:center}.crescent{font-size:42px;filter:drop-shadow(0 4px 15px #d9b86c55)}h1{margin:7px 0 5px;font-size:30px;color:var(--gold2)}.sub{color:var(--muted);font-size:14px}
-.progressBox,.panel{background:linear-gradient(145deg,#132b21dd,#0d1e17ee);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:17px;margin:12px 0}
-.progressTop{display:flex;justify-content:space-between;gap:10px;align-items:center}.progressTop b{color:var(--gold2);font-size:18px}.bar{height:10px;background:#20372d;border-radius:20px;overflow:hidden;margin:13px 0 5px}.fill{height:100%;width:0;background:linear-gradient(90deg,#63c98d,#d9b86c);border-radius:20px;transition:.5s}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.stat{background:#0b1a14;border:1px solid #21382d;border-radius:15px;padding:12px;text-align:center}.stat b{display:block;font-size:20px;color:var(--gold2)}.stat span{font-size:11px;color:var(--muted)}
-.sectionTitle{display:flex;justify-content:space-between;align-items:center;margin:25px 2px 12px}.sectionTitle h2{font-size:19px;margin:0}.hint{font-size:11px;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.juz{background:linear-gradient(145deg,#142c22,#0e2119);border:1px solid var(--line);border-radius:18px;padding:15px;position:relative;overflow:hidden}.juz:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--green);opacity:.7}.juz.busy:before{background:#e2aa55}.juz.done:before{background:#67a8e8}.jhead{display:flex;justify-content:space-between;align-items:center}.num{font-size:23px;color:var(--gold2);font-weight:bold}.badge{font-size:10px;padding:5px 8px;border-radius:20px;background:#173c2b;color:#77d99e}.busy .badge{background:#4a3219;color:#f1bd69}.done .badge{background:#18354c;color:#8bc5f2}.person{margin:10px 0 3px;font-size:13px}.jp{font-size:11px;color:var(--muted);min-height:17px}.mini{height:6px;background:#21392e;border-radius:9px;margin:9px 0 11px;overflow:hidden}.mini i{display:block;height:100%;background:var(--gold);width:0}.take,.read{width:100%;padding:10px;border-radius:12px;background:var(--gold);color:#172116;font-weight:bold}.take:hover,.read:hover{filter:brightness(1.06)}.disabled{background:#25352e;color:#87968e}
-.people{display:grid;gap:8px}.personRow{display:flex;justify-content:space-between;gap:10px;align-items:center;background:#0b1a14;border:1px solid #20382d;border-radius:14px;padding:11px}.pname{font-weight:bold}.pmeta{font-size:11px;color:var(--muted);margin-top:3px}.dot{width:9px;height:9px;border-radius:50%;display:inline-block;background:var(--green);margin-left:6px}.dot.done{background:#67a8e8}
-.overlay{position:fixed;inset:0;background:#000b;display:none;align-items:flex-end;justify-content:center;z-index:50}.modal{width:min(600px,100%);max-height:92vh;overflow:auto;background:#10231b;border:1px solid var(--line);border-radius:25px 25px 0 0;padding:20px;box-shadow:0 -15px 60px #000c}.modal h2{margin-top:0;color:var(--gold2)}label{font-size:12px;color:var(--muted)}input{width:100%;background:#08150f;color:white;border:1px solid #345044;border-radius:12px;padding:12px;margin:7px 0 13px;outline:0}.actions{display:flex;gap:9px}.actions button{flex:1;padding:12px;border-radius:12px}.primary{background:var(--gold);color:#172116;font-weight:bold}.secondary{background:#25382f;color:white}.reader{display:none;position:fixed;inset:0;background:#07130f;z-index:60;overflow:auto}.readerTop{position:sticky;top:0;background:#0b1c15ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:13px;display:flex;justify-content:space-between;align-items:center;z-index:2}.readerTop button{background:#1b3328;color:white;padding:9px 12px;border-radius:11px}.readerBody{max-width:760px;margin:auto;padding:22px 18px 100px}.pageCard{background:#f7f0dd;color:#252116;border-radius:17px;box-shadow:0 12px 40px #0008;padding:26px 19px;min-height:70vh;position:relative}.pageNo{text-align:center;color:#7c6b48;font-size:11px;margin-bottom:20px}.ayah{font-family:"Times New Roman",serif;font-size:24px;line-height:2.25;text-align:justify;margin:0 0 13px}.ayahNum{font-size:14px;color:#8b6e35;margin:0 5px}.readerNav{display:flex;gap:9px;margin-top:15px}.readerNav button{flex:1;padding:13px;border-radius:13px;background:#173326;color:white}.readerNav button:disabled{opacity:.35}.finish{background:#d9b86c!important;color:#172116!important;font-weight:bold}
-.loading{position:fixed;inset:0;background:#07130f;display:flex;align-items:center;justify-content:center;z-index:100}.loadingBox{text-align:center}.spinner{width:38px;height:38px;border:3px solid #315243;border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;margin:auto auto 15px}@keyframes spin{to{transform:rotate(360deg)}}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%) translateY(80px);background:#e9d38e;color:#152018;padding:11px 17px;border-radius:13px;font-size:12px;font-weight:bold;transition:.3s;z-index:200}.toast.show{transform:translateX(-50%) translateY(0)}
-.smallBtn{background:transparent;color:var(--muted);font-size:11px;text-decoration:underline;margin-top:10px}
-@media(min-width:650px){.grid{grid-template-columns:repeat(3,1fr)}.overlay{align-items:center}.modal{border-radius:25px}.stats{grid-template-columns:repeat(3,1fr)}.wrap{padding-top:30px}}
-</style>
-</head>
+*{box-sizing:border-box}body{margin:0;background:#07130e;color:#f7f2e4;font-family:Tahoma,Arial,sans-serif}.wrap{max-width:1050px;margin:auto;padding:18px 14px 50px}.hero{text-align:center;padding:25px 0}.moon{font-size:42px;color:#e1c777}.hero h1{color:#ead594;margin:8px 0}.muted{color:#9fb0a6;font-size:13px}.panel{background:#10251b;border:1px solid #294638;border-radius:22px;padding:17px;margin:12px 0}.bar{height:10px;background:#20392d;border-radius:20px;overflow:hidden;margin:12px 0}.fill{height:100%;width:0;background:linear-gradient(90deg,#60c98d,#dfbd70)}.stats,.grid{display:grid;gap:10px}.stats{grid-template-columns:repeat(3,1fr)}.stat{background:#0b1a13;border:1px solid #20392d;border-radius:15px;padding:12px;text-align:center}.stat b{display:block;font-size:20px;color:#e5cf8a}.stat span{font-size:11px;color:#9fb0a6}.grid{grid-template-columns:repeat(2,1fr)}.juz{background:#11271d;border:1px solid #294638;border-radius:18px;padding:15px}.juz h3{margin:0;color:#ead594}.badge{display:inline-block;margin-top:8px;padding:5px 9px;border-radius:20px;background:#173c2b;color:#79dba0;font-size:11px}.busy .badge{background:#4a341a;color:#f1c16e}.done .badge{background:#18374e;color:#8fc9f5}.juz button,.actions button{width:100%;border:0;border-radius:12px;padding:11px;margin-top:10px;font-weight:bold}.primary{background:#dfbd70;color:#162017}.secondary{background:#24382e;color:white}.people{display:grid;gap:8px}.person{background:#0b1a13;border:1px solid #20392d;border-radius:14px;padding:11px}.modal{display:none;position:fixed;inset:0;background:#000b;align-items:flex-end;justify-content:center}.box{background:#10251b;width:min(600px,100%);padding:20px;border-radius:24px 24px 0 0}.box input{width:100%;padding:12px;border-radius:12px;border:1px solid #365443;background:#08150f;color:#fff;margin:8px 0}.reader{display:none;position:fixed;inset:0;background:#07130e;overflow:auto;z-index:10}.readerTop{position:sticky;top:0;background:#0b1c15ee;padding:12px;display:flex;justify-content:space-between}.readerTop button{background:#20382e;color:white;border:0;border-radius:10px;padding:9px}.readerBody{max-width:760px;margin:auto;padding:20px}.page{background:#f7f0dd;color:#272217;border-radius:17px;padding:25px 18px;min-height:65vh}.ayah{font:24px/2.25 "Times New Roman",serif;text-align:justify}.nav{display:flex;gap:8px;margin-top:10px}.nav button{flex:1;padding:13px;border:0;border-radius:12px;background:#dfbd70}.close{float:left;background:transparent!important;color:#fff!important}.section{margin-top:25px}.footer{text-align:center;color:#74847b;font-size:11px;margin-top:25px}
+@media(min-width:650px){.grid{grid-template-columns:repeat(3,1fr)}.modal{align-items:center}.box{border-radius:24px}.readerBody{padding-top:30px}}
+</style></head>
 <body>
-<div id="loading" class="loading"><div class="loadingBox"><div class="spinner"></div><b>در حال آماده‌سازی ختم قرآن...</b><div class="sub" style="margin-top:8px">برای اولین بار ممکن است چند ثانیه طول بکشد</div></div></div>
-
 <div class="wrap">
-<header class="hero">
-<div class="crescent">☾</div>
-<h1>ختم قرآن کریم</h1>
-<div class="sub">۳۰ جزء · قرائت صفحه‌به‌صفحه · همراه با هم</div>
-</header>
-
-<section class="progressBox">
-<div class="progressTop"><span>پیشرفت ختم</span><b id="percent">۰٪</b></div>
-<div class="bar"><div id="fill" class="fill"></div></div>
-<div id="progressText" class="sub">۰ از ۳۰ جزء به پایان رسیده</div>
-<div class="stats">
-<div class="stat"><b id="freeCount">۳۰</b><span>جزء آزاد</span></div>
-<div class="stat"><b id="busyCount">۰</b><span>در حال قرائت</span></div>
-<div class="stat"><b id="doneCount">۰</b><span>تکمیل‌شده</span></div>
-</div>
-</section>
-
-<div class="sectionTitle"><h2>📖 جزءهای قرآن</h2><span class="hint">سبز = آزاد · طلایی = در حال قرائت</span></div>
-<section id="juzGrid" class="grid"></section>
-
-<div class="sectionTitle"><h2>👥 همراهان ختم</h2><span class="hint">وضعیت زنده</span></div>
-<section class="panel"><div id="people" class="people"><div class="sub">هنوز کسی جزءی را برنداشته.</div></div></section>
-
-<section class="panel" style="text-align:center">
-<div class="sub">نسخه آنلاین ختم قرآن</div>
-<button class="smallBtn" onclick="openSettings()">تنظیم اتصال آنلاین</button>
-</section>
+<header class="hero"><div class="moon">☾</div><h1>ختم قرآن کریم</h1><div class="muted">با هم می‌خوانیم، با هم به پایان می‌رسانیم</div></header>
+<section class="panel"><div style="display:flex;justify-content:space-between"><span>پیشرفت ختم</span><b id="pct">۰٪</b></div><div class="bar"><div id="fill" class="fill"></div></div><div id="progress" class="muted">۰ از ۳۰ جزء تکمیل شده</div><div class="stats"><div class="stat"><b id="free">۳۰</b><span>آزاد</span></div><div class="stat"><b id="reading">۰</b><span>در حال قرائت</span></div><div class="stat"><b id="done">۰</b><span>تکمیل شده</span></div></div></section>
+<div class="section"><h2>📖 ۳۰ جزء قرآن</h2><div id="grid" class="grid"></div></div>
+<div class="section"><h2>👥 همراهان ختم</h2><section class="panel"><div id="people" class="people"></div></section></div>
+<div class="footer">نسخه آزمایشی · آماده اتصال به Supabase</div>
 </div>
 
-<div id="overlay" class="overlay" onclick="if(event.target===this)closeModal()">
-<div class="modal">
-<h2>📖 برداشتن جزء <span id="modalJuz"></span></h2>
-<label>نام شما</label>
-<input id="nameInput" maxlength="40" placeholder="مثلاً علی رضایی">
-<div class="sub" style="margin-bottom:14px">بعد از برداشتن، جزء برای شما ثبت می‌شود و بقیه هم وضعیت آن را می‌بینند.</div>
-<div class="actions"><button class="secondary" onclick="closeModal()">انصراف</button><button class="primary" onclick="takeJuz()">برداشتن جزء</button></div>
-</div></div>
+<div id="modal" class="modal"><div class="box"><button class="close" onclick="closeModal()">✕</button><h2>برداشتن جزء <span id="jnum"></span></h2><div class="muted">نام خودت را وارد کن.</div><input id="name" maxlength="40" placeholder="مثلاً علی رضایی"><div class="actions"><button class="primary" onclick="take()">شروع قرائت</button><button class="secondary" onclick="closeModal()">انصراف</button></div></div></div>
 
-<div id="settingsOverlay" class="overlay" onclick="if(event.target===this)closeSettings()">
-<div class="modal">
-<h2>⚙️ اتصال آنلاین</h2>
-<div class="sub" style="line-height:1.9">برای اینکه ۳۲ نفر از گوشی‌های مختلف یک وضعیت مشترک ببینند، آدرس پروژه Supabase و کلید anon را وارد کن. این دو مقدار را بعداً هم می‌توانی تغییر بدهی.</div>
-<label>Supabase Project URL</label>
-<input id="sbUrl" placeholder="https://xxxxxxxx.supabase.co">
-<label>Supabase anon public key</label>
-<input id="sbKey" placeholder="eyJ...">
-<div class="actions"><button class="secondary" onclick="closeSettings()">انصراف</button><button class="primary" onclick="saveSettings()">ذخیره و اتصال</button></div>
-</div></div>
+<div id="reader" class="reader"><div class="readerTop"><button onclick="closeReader()">‹ بازگشت</button><b id="rtitle">جزء</b><button onclick="closeReader()">✕</button></div><div class="readerBody"><div id="rloading" class="muted" style="text-align:center;padding:40px">در حال دریافت قرآن...</div><div id="page" class="page" style="display:none"><div id="pno" style="text-align:center;color:#806c45;font-size:11px;margin-bottom:18px"></div><div id="ayahs"></div></div><div class="nav"><button id="prev" onclick="change(-1)">‹ صفحه قبل</button><button id="next" onclick="change(1)">صفحه بعد ›</button></div><button id="finish" class="nav" style="display:none;width:100%;margin-top:8px" onclick="finish()">✅ این جزء را تمام کردم</button></div></div>
 
-<div id="reader" class="reader">
-<div class="readerTop"><button onclick="closeReader()">‹ بازگشت</button><div id="readerTitle">جزء</div><button onclick="toggleDarkReader()">◐</button></div>
-<div class="readerBody">
-<div id="readerLoading" class="sub" style="text-align:center;padding:40px">در حال دریافت صفحات قرآن...</div>
-<div id="pageCard" class="pageCard" style="display:none">
-<div id="pageNo" class="pageNo"></div><div id="ayahs"></div>
-</div>
-<div class="readerNav"><button id="prevBtn" onclick="changePage(-1)">‹ صفحه قبل</button><button id="nextBtn" onclick="changePage(1)">صفحه بعد ›</button></div>
-<button id="finishBtn" class="readerNav finish" onclick="finishJuz()" style="width:100%;margin-top:9px">✅ این جزء را تمام کردم</button>
-</div>
-</div>
-
-<div id="toast" class="toast"></div>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const CONFIG={url:localStorage.getItem('khatm_sb_url')||'',key:localStorage.getItem('khatm_sb_key')||''};
-let sb=null, selectedJuz=null, currentReaderJuz=null, currentPageIndex=0, readerPages=[], readerDark=false;
-const localKey='khatm_demo_assignments';
-const fa=n=>String(n).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
-const $=id=>document.getElementById(id);
-
-function demoData(){
- let x=JSON.parse(localStorage.getItem(localKey)||'null');
- if(!x){x=Array.from({length:30},(_,i)=>({juz:i+1,status:'free',name:null,current_page:0,total_pages:0}));localStorage.setItem(localKey,JSON.stringify(x))}
- return x;
-}
-let data=demoData();
-
-async function init(){
- if(CONFIG.url&&CONFIG.key){
-   try{
-    sb=supabase.createClient(CONFIG.url,CONFIG.key);
-    await loadOnline();
-    subscribe();
-   }catch(e){toast('اتصال آنلاین برقرار نشد؛ حالت محلی فعال شد.')}
- }
- render();
- $('loading').style.display='none';
-}
-async function loadOnline(){
- const {data:rows,error}=await sb.from('juz_assignments').select('*').order('juz');
- if(error)throw error;
- if(rows&&rows.length){data=rows}
- else{await sb.from('juz_assignments').insert(Array.from({length:30},(_,i)=>({juz:i+1,status:'free',name:null,current_page:0,total_pages:0}))); const r=await sb.from('juz_assignments').select('*').order('juz');if(!r.error)data=r.data}
-}
-function subscribe(){
- sb.channel('khatm-live').on('postgres_changes',{event:'*',schema:'public',table:'juz_assignments'},payload=>{
-   if(payload.eventType==='DELETE')return;
-   const i=data.findIndex(x=>x.juz===payload.new.juz); if(i>=0)data[i]=payload.new; else data.push(payload.new);
-   data.sort((a,b)=>a.juz-b.juz); render();
- }).subscribe();
-}
-function render(){
- const free=data.filter(x=>x.status==='free').length,busy=data.filter(x=>x.status==='reading').length,done=data.filter(x=>x.status==='done').length;
- $('freeCount').textContent=fa(free);$('busyCount').textContent=fa(busy);$('doneCount').textContent=fa(done);
- $('percent').textContent=fa(Math.round(done/30*100))+'٪';$('fill').style.width=(done/30*100)+'%';$('progressText').textContent=`${fa(done)} از ${fa(30)} جزء به پایان رسیده`;
- $('juzGrid').innerHTML=data.map(x=>{
-  const pct=x.total_pages?Math.round((x.current_page/x.total_pages)*100):0;
-  const status=x.status==='free'?'🟢 آزاد':x.status==='reading'?'🟠 در حال قرائت':'🔵 تکمیل‌شده';
-  return `<article class="juz ${x.status==='reading'?'busy':''} ${x.status==='done'?'done':''}">
-   <div class="jhead"><div class="num">جزء ${fa(x.juz)}</div><span class="badge">${status}</span></div>
-   <div class="person">${x.name?`👤 ${esc(x.name)}`:'هنوز کسی برنداشته'}</div>
-   <div class="jp">${x.status==='reading'?`صفحه ${fa(x.current_page+1)} از ${fa(x.total_pages||'—')}`:x.status==='done'?'قرائت کامل شد':'برای قرائت انتخاب کنید'}</div>
-   <div class="mini"><i style="width:${pct}%"></i></div>
-   ${x.status==='free'?`<button class="take" onclick="openTake(${x.juz})">برداشتن جزء ${fa(x.juz)}</button>`:`<button class="read" onclick="openReader(${x.juz})">${x.status==='done'?'مشاهده جزء':'ادامه قرائت'}</button>`}
-  </article>`;
- }).join('');
- const active=data.filter(x=>x.status!=='free');
- $('people').innerHTML=active.length?active.map(x=>`<div class="personRow"><div><span class="dot ${x.status==='done'?'done':''}"></span><span class="pname">${esc(x.name||'بدون نام')}</span><div class="pmeta">جزء ${fa(x.juz)} · ${x.status==='done'?'به پایان رسانده':'در حال قرائت'}${x.status==='reading'&&x.total_pages?` · صفحه ${fa(x.current_page+1)} از ${fa(x.total_pages)}`:''}</div></div><div>${x.status==='done'?'✅':'📖'}</div></div>`).join(''):'<div class="sub">هنوز کسی جزءی را برنداشته.</div>';
-}
+const key='quran_khatm_v1';let data=JSON.parse(localStorage.getItem(key)||'null')||Array.from({length:30},(_,i)=>({juz:i+1,status:'free',name:'',page:0,total:0}));let selected=0,pages=[],pi=0;
+const fa=n=>String(n).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);const $=x=>document.getElementById(x);
+function save(){localStorage.setItem(key,JSON.stringify(data))}
+function render(){let free=data.filter(x=>x.status==='free').length,reading=data.filter(x=>x.status==='reading').length,done=data.filter(x=>x.status==='done').length,p=done/30*100;$('free').textContent=fa(free);$('reading').textContent=fa(reading);$('done').textContent=fa(done);$('pct').textContent=fa(Math.round(p))+'٪';$('fill').style.width=p+'%';$('progress').textContent=fa(done)+' از ۳۰ جزء تکمیل شده';
+$('grid').innerHTML=data.map(x=>{let pct=x.total?Math.round(x.page/x.total*100):0;let s=x.status==='free'?'🟢 آزاد':x.status==='reading'?'🟠 در حال قرائت':'🔵 تکمیل شده';return `<article class="juz ${x.status}"><h3>جزء ${fa(x.juz)}</h3><span class="badge">${s}</span><p>${x.name?'👤 '+esc(x.name):'هنوز کسی برنداشته'}</p><div class="muted">${x.status==='reading'?'صفحه '+fa(x.page+1)+' از '+fa(x.total||'—'):x.status==='done'?'قرائت کامل شد':'آماده انتخاب'}</div><div class="bar"><div class="fill" style="width:${pct}%"></div></div>${x.status==='free'?`<button class="primary" onclick="openTake(${x.juz})">برداشتن جزء</button>`:`<button class="secondary" onclick="openReader(${x.juz})">📖 ${x.status==='done'?'مشاهده':'ادامه قرائت'}</button>`}</article>`}).join('');
+let a=data.filter(x=>x.status!=='free');$('people').innerHTML=a.length?a.map(x=>`<div class="person">👤 <b>${esc(x.name)}</b><br><span class="muted">جزء ${fa(x.juz)} · ${x.status==='done'?'✅ تکمیل شده':'📖 در حال قرائت · صفحه '+fa(x.page+1)}</span></div>`).join(''):'<span class="muted">هنوز کسی جزءی را برنداشته.</span>'}
 function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
-function openTake(j){selectedJuz=j;$('modalJuz').textContent=fa(j);$('nameInput').value=localStorage.getItem('khatm_name')||'';$('overlay').style.display='flex';setTimeout(()=>$('nameInput').focus(),100)}
-function closeModal(){$('overlay').style.display='none'}
-async function takeJuz(){
- const name=$('nameInput').value.trim(); if(!name)return toast('نامت را وارد کن');
- localStorage.setItem('khatm_name',name);
- const old=data.find(x=>x.juz===selectedJuz); if(!old||old.status!=='free')return toast('این جزء همین الان توسط شخص دیگری برداشته شد');
- const row={...old,status:'reading',name,current_page:0,total_pages:0,started_at:new Date().toISOString(),completed_at:null};
- if(sb){const {error}=await sb.from('juz_assignments').update(row).eq('juz',selectedJuz).eq('status','free');if(error)return toast('خطا در اتصال آنلاین');await loadOnline()}
- else{data[data.findIndex(x=>x.juz===selectedJuz)]=row;localStorage.setItem(localKey,JSON.stringify(data))}
- closeModal();render();openReader(selectedJuz);
-}
-function openReader(j){
- currentReaderJuz=j;currentPageIndex=0;readerPages=[];$('reader').style.display='block';$('readerTitle').textContent='جزء '+fa(j);$('pageCard').style.display='none';$('readerLoading').style.display='block';$('finishBtn').style.display='none';
- const row=data.find(x=>x.juz===j);if(row&&row.current_page)currentPageIndex=row.current_page;
- fetch(`https://api.alquran.cloud/v1/juz/${j}/quran-uthmani`).then(r=>r.json()).then(json=>{
-  if(!json.data||!json.data.ayahs)throw Error();
-  const map={};json.data.ayahs.forEach(a=>(map[a.page]??=[]).push(a));readerPages=Object.keys(map).sort((a,b)=>a-b).map(p=>map[p]);
-  if(row&&row.total_pages!==readerPages.length){updateProgress(row.juz,currentPageIndex,readerPages.length)}
-  renderReaderPage();
- }).catch(()=>{$('readerLoading').textContent='دریافت قرآن انجام نشد. اتصال اینترنت را بررسی کن.'});
-}
-function renderReaderPage(){
- $('readerLoading').style.display='none';$('pageCard').style.display='block';
- const page=readerPages[currentPageIndex]||[];$('pageNo').textContent=`صفحه ${fa(currentPageIndex+1)} از ${fa(readerPages.length)}`;
- $('ayahs').innerHTML=page.map(a=>`<p class="ayah">${esc(a.text)} <span class="ayahNum">﴿${fa(a.numberInSurah)}﴾</span></p>`).join('');
- $('prevBtn').disabled=currentPageIndex<=0;$('nextBtn').disabled=currentPageIndex>=readerPages.length-1;
- $('finishBtn').style.display=currentPageIndex>=readerPages.length-1?'block':'none';
- if(currentReaderJuz){const row=data.find(x=>x.juz===currentReaderJuz);if(row&&row.status==='reading')updateProgress(row.juz,currentPageIndex,readerPages.length,false)}
-}
-let saveTimer=null;
-function updateProgress(j,p,total,rerender=true){
- clearTimeout(saveTimer);saveTimer=setTimeout(async()=>{
-  const i=data.findIndex(x=>x.juz===j);if(i<0)return;data[i]={...data[i],current_page:p,total_pages:total};
-  if(sb)await sb.from('juz_assignments').update({current_page:p,total_pages:total}).eq('juz',j);
-  else localStorage.setItem(localKey,JSON.stringify(data));
-  if(rerender)render();
- },250);
-}
-function changePage(d){if(!readerPages.length)return;currentPageIndex=Math.max(0,Math.min(readerPages.length-1,currentPageIndex+d));renderReaderPage();window.scrollTo({top:0,behavior:'smooth'})}
-async function finishJuz(){
- const i=data.findIndex(x=>x.juz===currentReaderJuz);if(i<0)return;
- const row={...data[i],status:'done',current_page:readerPages.length-1,total_pages:readerPages.length,completed_at:new Date().toISOString()};
- if(sb){const {error}=await sb.from('juz_assignments').update(row).eq('juz',currentReaderJuz);if(error)return toast('ثبت پایان قرائت ناموفق بود');await loadOnline()}else{data[i]=row;localStorage.setItem(localKey,JSON.stringify(data))}
- render();toast('ماشاءالله! این جزء به پایان رسید 🌿');closeReader();
-}
+function openTake(j){selected=j;$('jnum').textContent=fa(j);$('name').value=localStorage.getItem('myName')||'';$('modal').style.display='flex'}
+function closeModal(){$('modal').style.display='none'}
+function take(){let n=$('name').value.trim();if(!n)return alert('نامت را وارد کن');let x=data.find(a=>a.juz===selected);if(x.status!=='free')return alert('این جزء قبلاً برداشته شده');localStorage.setItem('myName',n);x.status='reading';x.name=n;save();closeModal();render();openReader(selected)}
+function openReader(j){let x=data.find(a=>a.juz===j);selected=j;pi=x.page||0;$('reader').style.display='block';$('rtitle').textContent='جزء '+fa(j);$('page').style.display='none';$('rloading').style.display='block';fetch('https://api.alquran.cloud/v1/juz/'+j+'/quran-uthmani').then(r=>r.json()).then(d=>{let m={};d.data.ayahs.forEach(a=>(m[a.page]??=[]).push(a));pages=Object.values(m);x.total=pages.length;save();render();draw()}).catch(()=>{$('rloading').textContent='اتصال اینترنت را بررسی کن.'})}
+function draw(){$('rloading').style.display='none';$('page').style.display='block';$('pno').textContent='صفحه '+fa(pi+1)+' از '+fa(pages.length);$('ayahs').innerHTML=(pages[pi]||[]).map(a=>`<p class="ayah">${esc(a.text)} ﴿${fa(a.numberInSurah)}﴾</p>`).join('');$('prev').disabled=pi<=0;$('next').disabled=pi>=pages.length-1;$('finish').style.display=pi===pages.length-1?'block':'none';let x=data.find(a=>a.juz===selected);if(x&&x.status==='reading'){x.page=pi;save();render()}}
+function change(d){pi=Math.max(0,Math.min(pages.length-1,pi+d));draw();scrollTo(0,0)}
+function finish(){let x=data.find(a=>a.juz===selected);x.status='done';x.page=pages.length-1;x.total=pages.length;save();render();closeReader();alert('ماشاءالله 🌿 جزء با موفقیت تکمیل شد.')}
 function closeReader(){$('reader').style.display='none'}
-function toggleDarkReader(){readerDark=!readerDark;$('pageCard').style.background=readerDark?'#171612':'#f7f0dd';$('pageCard').style.color=readerDark?'#eee8d8':'#252116'}
-function openSettings(){$('sbUrl').value=localStorage.getItem('khatm_sb_url')||'';$('sbKey').value=localStorage.getItem('khatm_sb_key')||'';$('settingsOverlay').style.display='flex'}
-function closeSettings(){$('settingsOverlay').style.display='none'}
-function saveSettings(){const u=$('sbUrl').value.trim(),k=$('sbKey').value.trim();if(!u||!k)return toast('هر دو مقدار را وارد کن');localStorage.setItem('khatm_sb_url',u);localStorage.setItem('khatm_sb_key',k);location.reload()}
-let toastTimer;function toast(t){$('toast').textContent=t;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2600)}
-document.addEventListener('keydown',e=>{if($('reader').style.display==='block'){if(e.key==='ArrowLeft')changePage(1);if(e.key==='ArrowRight')changePage(-1);if(e.key==='Escape')closeReader()}});
-init();
-</script>
-</body>
-</html>
+render();
+</script></body></html>
